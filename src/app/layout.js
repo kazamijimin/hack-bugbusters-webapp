@@ -28,7 +28,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Switcher />
         {children}
         <Footer />
       </body>

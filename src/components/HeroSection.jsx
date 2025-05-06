@@ -1,9 +1,9 @@
 import React from 'react'
 import { Poppins } from 'next/font/google'
 
-function HeroSection() {
+function HeroSection({ ref }) {
     return (
-        <section className='py-12 md:py-20 mb-8 md:mb-16 px-4'>
+        <section className='py-12 md:py-20 mb-8 md:mb-16 px-4' ref={ref}>
             <div className='container mx-auto max-w-7xl'>
                 <div className='flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-20'>
                     <div className='lg:flex-1'>
@@ -22,6 +22,7 @@ function HeroSection() {
                             creators, learners, and innovators. Upload, watch, and take timestamped 
                             notes—all in one streamlined platform.
                         </p>
+                        <button className='mt-6 md:mt-8 bg-indigo-600 text-white px-5 py-3 rounded-full font-medium hover:bg-indigo-700 transition duration-300'>Watch Now</button>
                     </div>
                 
                     <div className="lg:flex-1 flex justify-center lg:justify-end items-center mt-8 lg:mt-0">

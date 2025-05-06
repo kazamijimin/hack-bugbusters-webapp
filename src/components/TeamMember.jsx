@@ -33,7 +33,7 @@ const TeamMember = ({ name, bio, image }) => {
   );
 };
 
-export default function TeamPage() {
+export default function TeamPage({ ref }) {
   const teamMembers = [
     {
       name: "Francis Mistica",
@@ -58,7 +58,7 @@ export default function TeamPage() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-12 px-4">
+    <div className="max-w-6xl mx-auto py-12 px-4" ref={ref}>
       <h1 className="text-3xl font-bold text-center text-indigo-600 mb-12">MEET OUR TEAM</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

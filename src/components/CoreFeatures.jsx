@@ -1,6 +1,6 @@
 import React from "react";
 
-function CoreFeatures() {
+function CoreFeatures({ ref }) {
   const features = [
     {
       id: 1,
@@ -23,7 +23,7 @@ function CoreFeatures() {
   ];
 
   return (  
-    <section className="py-12 sm:py-16 px-4 bg-white">
+    <section className="py-12 sm:py-16 px-4 bg-white" ref={ref}>
       <div className="container mx-auto max-w-6xl">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4">
