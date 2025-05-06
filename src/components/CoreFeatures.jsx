@@ -4,18 +4,21 @@ function CoreFeatures() {
   const features = [
     {
       id: 1,
-      title: "Core feature 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      title: "Stream Quality",
+      description: "Enjoy seamless, high-definition with streaming with minimal buffering, ensuring a smooth experience for both educators and learners.",
+      imageUrl: "https://via.placeholder.com/150"
     },
     {
       id: 2,
-      title: "Core feature 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      title: "Timestampped Notes",
+      description: "Easily add timestamped notes to your videos lectures so students can quickly revisit key points and navigate lessons quickly",
+      imageUrl: "https://via.placeholder.com/150"
     },
     {
       id: 3,
-      title: "Core feature 3",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      title: "Upload Courses",
+      description: "Effortlessly upload and organize your courses with our intuitive interface, supporting various file formats to make content management simple.",
+      imageUrl: "https://via.placeholder.com/150"
     }
   ];
 
@@ -29,15 +32,20 @@ function CoreFeatures() {
         
         {/* Description */}
         <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        Our platforms empowers educators and learners with innovative tools to enhance online learning, streamline content delivery, and boos engagement
         </p>
         
         {/* Feature cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div key={feature.id} className="flex flex-col items-center">
-              <div className="bg-gray-200 w-full h-[400] mb-6"></div>
+              <div className="bg-gray-200 w-full h-[400] mb-6">
+                <img
+                  src={feature.imageUrl}
+                  alt={feature.title}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
               <h3 className="text-lg font-medium mb-2 text-center">{feature.title}</h3>
               <p className="text-gray-600 text-center text-sm">
                 {feature.description}
