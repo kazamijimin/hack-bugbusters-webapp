@@ -22,32 +22,33 @@ function CoreFeatures() {
     }
   ];
 
-  return (
-    <section className="py-16 px-4">
+  return (  
+    <section className="py-12 sm:py-16 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          What our product can do
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4">
+          What our platform can do
         </h2>
         
         {/* Description */}
-        <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
-        Our platforms empowers educators and learners with innovative tools to enhance online learning, streamline content delivery, and boos engagement
+        <p className="text-gray-600 text-center max-w-3xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base">
+          Our platforms empowers educators and learners with innovative tools to enhance online learning, streamline content delivery, and boost engagement
         </p>
         
         {/* Feature cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           {features.map((feature) => (
-            <div key={feature.id} className="flex flex-col items-center">
-              <div className="bg-gray-200 w-full h-[400] mb-6">
+            <div key={feature.id} className="flex flex-col items-center bg-gray-50 rounded-xl p-4 sm:p-6 transition-transform hover:shadow-md hover:-translate-y-1">
+              <div className="w-full aspect-[2.5/3] mb-4 sm:mb-6 overflow-hidden rounded-lg">
                 <img
                   src={feature.imageUrl}
                   alt={feature.title}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                  loading="lazy"
                 />
               </div>
-              <h3 className="text-lg font-medium mb-2 text-center">{feature.title}</h3>
-              <p className="text-gray-600 text-center text-sm">
+              <h3 className="text-lg sm:text-xl font-medium mb-2 text-center">{feature.title}</h3>
+              <p className="text-gray-600 text-center text-xs sm:text-sm">
                 {feature.description}
               </p>
             </div>

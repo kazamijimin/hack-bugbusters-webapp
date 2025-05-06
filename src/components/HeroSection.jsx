@@ -3,36 +3,38 @@ import { Poppins } from 'next/font/google'
 
 function HeroSection() {
     return (
-        <div className='flex gap-20 '>
+        <section className='py-12 md:py-20 mb-8 md:mb-16 px-4'>
+            <div className='container mx-auto max-w-7xl'>
+                <div className='flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-20'>
+                    <div className='lg:flex-1'>
+                        <h1 className='font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
+                            Stream Smarter.
+                        </h1>
+                        <h1 className='pt-2 md:pt-5 font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
+                            Debug Faster.
+                        </h1>
+                        <h1 className='pt-2 md:pt-5 font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
+                            Learn Better.
+                        </h1>
 
-            <div>
-            <h1 className='pl-40 pt-10 font-black text-7xl'>
-                Stream Smarter.
-            </h1>
-            <h1 className='pl-40 pt-5 font-black text-7xl'>
-                Debug Faster.
-            </h1>
-            <h1 className='pl-40 pt-5 font-black text-7xl'>
-                Learn Better.
-            </h1>
-
-            <p className='mt-2 leading-9 pl-40 pt-5 text-lg text-gray-400 font-medium'>
-                Welcome to StreamSage, a lightweight video streaming app built for<br /> creators, learners, and innovators. Upload, watch, and take timestamped <br />notes—all in one streamlined platform.
-
-            </p>
-
+                        <p className='mt-4 md:mt-6 leading-relaxed md:leading-9 text-base md:text-lg text-gray-400 font-medium'>
+                            Welcome to StreamSage, a lightweight video streaming app built for
+                            creators, learners, and innovators. Upload, watch, and take timestamped 
+                            notes—all in one streamlined platform.
+                        </p>
+                    </div>
                 
+                    <div className="lg:flex-1 flex justify-center lg:justify-end items-center mt-8 lg:mt-0">
+                        <img 
+                            className="rounded-lg max-h-[400px] lg:max-h-[500px] w-auto object-cover shadow-lg" 
+                            src="assets/herosection/gege.png"
+                            alt="StreamSage platform preview" 
+                        />
+                    </div>
+                </div>
             </div>
-           
-
-            <div className= "place-content-center">
-                <img className= "pl-30 pt-10 rounded h-110" src="assets/herosection/gege.png" />
-            </div>
-
-
-            </div>
-
-            )
+        </section>
+    )
 }
 
-            export default HeroSection
+export default HeroSection
