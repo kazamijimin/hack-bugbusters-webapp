@@ -22,7 +22,7 @@ function HeroSection({ ref }) {
                             creators, learners, and innovators. Upload, watch, and take timestamped 
                             notes—all in one streamlined platform.
                         </p>
-                        <a href="https://prod-streamsage.vercel.app/" className='mt-6 md:mt-8 bg-indigo-600 text-white px-5 py-3 rounded-full font-medium hover:bg-indigo-700 transition duration-300'>Watch Now</a>
+                        <a href="https://prod-streamsage.vercel.app/" className='mt-6 block text-center md:mt-8 bg-indigo-600 text-white px-5 py-3 rounded-full font-medium hover:bg-indigo-700 transition duration-300'>Watch Now</a>
                     </div>
                 
                     <div className="lg:flex-1 flex justify-center lg:justify-end items-center mt-8 lg:mt-0">
