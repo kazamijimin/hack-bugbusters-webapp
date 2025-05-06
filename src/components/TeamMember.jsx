@@ -1,7 +1,7 @@
 import React from 'react';
 import { Facebook, Instagram, Github } from 'lucide-react';
 
-const TeamMember = ({ name, bio, image }) => {
+const TeamMember = ({ name, bio, image, socialLinks = {} }) => {
   return (
     <div className="bg-gray-100 p-6 rounded-lg flex flex-col items-center h-full shadow-sm hover:shadow-md transition-shadow">
       <div className="w-32 h-32 rounded-full border-2 border-indigo-600 bg-gray-200 mb-4 overflow-hidden flex-shrink-0">
@@ -18,13 +18,22 @@ const TeamMember = ({ name, bio, image }) => {
         </div>
         
         <div className="flex justify-center space-x-4">
-          <a href="#" className="text-black hover:text-indigo-600 transition-colors">
+          <a href={socialLinks.facebook || "#"} 
+             className="text-black hover:text-indigo-600 transition-colors"
+             target="_blank" 
+             rel="noopener noreferrer">
             <Facebook size={20} />
           </a>
-          <a href="#" className="text-black hover:text-indigo-600 transition-colors">
+          <a href={socialLinks.instagram || "#"} 
+             className="text-black hover:text-indigo-600 transition-colors"
+             target="_blank" 
+             rel="noopener noreferrer">
             <Instagram size={20} />
           </a>
-          <a href="#" className="text-black hover:text-indigo-600 transition-colors">
+          <a href={socialLinks.github || "#"} 
+             className="text-black hover:text-indigo-600 transition-colors"
+             target="_blank" 
+             rel="noopener noreferrer">
             <Github size={20} />
           </a>
         </div>
@@ -38,22 +47,42 @@ export default function TeamPage({ ref }) {
     {
       name: "Francis Mistica",
       bio: "Full-stack developer with a passion for creating seamless user experiences. Skilled in React, Node.js, and database management.",
-      image: "assets/picture/kiks.jpg" 
+      image: "assets/picture/kiks.jpg",
+      socialLinks: {
+        facebook: "https://www.facebook.com/francis.mistica", // Replace with actual URL
+        instagram: "https://instagram.com/misticafrancis", // Replace with actual URL
+        github: "https://github.com/Kiko915" // Replace with actual URL
+      }
     },
     {
       name: "Jose Aquino",
       bio: "Backend developer with expertise in server-side technologies. Committed to building robust and scalable applications.",
-      image: "assets/picture/jose.jpg"
+      image: "assets/picture/jose.jpg",
+      socialLinks: {
+        facebook: "https://www.facebook.com/aquinojxse", // Replace with actual URL
+        instagram: "https://instagram.com/_jxseaquino", // Replace with actual URL
+        github: "https://github.com/fyodorrrrr"
+      }
     },
     {
       name: "Jeremy Garin",
       bio: "Frontend developer with a keen eye for design. Experienced in creating responsive and user-friendly interfaces.",
-      image: "assets/picture/jem.jpg" 
+      image: "assets/picture/jem.jpg",
+      socialLinks: {
+        facebook: "https://www.facebook.com/SupremeNovaAE/", // Replace with actual URL
+        instagram: "https://instagram.com/_jemmmh", // Replace with actual URL
+        github: "https://github.com/emperuna"
+      }
     },
     {
       name: "Nick Narry Mendoza",
       bio: "Vibecoder and UI/UX designer. Passionate about crafting intuitive and engaging user experiences.",
-      image: "assets/picture/nick.jpg"
+      image: "assets/picture/nick.jpg",
+      socialLinks: {
+        facebook: "https://www.facebook.com/kouhyou.mizumi", // Replace with actual URL
+        instagram: "https://instagram.com/nicknarrymendoza", // Replace with actual URL
+        github: "https://github.com/kazamijimin"
+      }
     }
   ];
 
@@ -68,6 +97,7 @@ export default function TeamPage({ ref }) {
             name={member.name}
             bio={member.bio}
             image={member.image}
+            socialLinks={member.socialLinks}
           />
         ))}
       </div>
