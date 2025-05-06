@@ -6,19 +6,19 @@ function CoreFeatures() {
       id: 1,
       title: "Stream Quality",
       description: "Enjoy seamless, high-definition with streaming with minimal buffering, ensuring a smooth experience for both educators and learners.",
-      imageUrl: "https://via.placeholder.com/150"
+      imageUrl: "https://i.pinimg.com/736x/e2/f9/7b/e2f97b86388295aa7b29ef0fec773621.jpg"
     },
     {
       id: 2,
       title: "Timestampped Notes",
       description: "Easily add timestamped notes to your videos lectures so students can quickly revisit key points and navigate lessons quickly",
-      imageUrl: "https://via.placeholder.com/150"
+      imageUrl: "https://i.pinimg.com/736x/f1/16/5f/f1165f02f93c700cb3210d78acb61550.jpg"
     },
     {
       id: 3,
       title: "Upload Courses",
       description: "Effortlessly upload and organize your courses with our intuitive interface, supporting various file formats to make content management simple.",
-      imageUrl: "https://via.placeholder.com/150"
+      imageUrl: "https://i.pinimg.com/736x/96/7b/a5/967ba589a47d2fddf818199049db79d4.jpg"
     }
   ];
 
